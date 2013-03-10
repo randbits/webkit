@@ -1,0 +1,18 @@
+
+
+This module generates following artifacts which will be installed
+1) programs 
+2) headers
+   include/webkit2/:
+3) libraries
+   lib/libwebkit2gtk-3.0.[la, so, so*]
+4) libexec/:
+   
+
+
+Makefiles:
+Source/WebKit2/GNUmakefile.am
++---- Source/WebKit2/GNUmakefile.list.am
+Source/WebKit2/UIProcess/API/gtk/tests/GNUmakefile.am
+
+similar to 04.webkit

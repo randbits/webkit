@@ -1,0 +1,27 @@
+
+
+1. DerivedSources/
+
+2. Documentation/
+
+3. Source/
+   +---- 1' JavaScriptCore/
+   +---- 2' WebCore/
+   +---- 3' WebKit/
+   +---- 4' WebKit2/
+   |
+   +---- 5' WTF/: Web Template Framework. utility library for WebKit.
+   |
+   +---- 6' autotools/: m4 scripts and shell scripts for the build system
+
+4' Tools/
+   +---- 1' DumpRenderTree/
+   +---- 2' gtk/
+   +---- 3' GtkLauncher/
+   +---- 4' jhbuild/
+   +---- 5' MiniBrowser/
+   +---- 6' Scripts/
+   +---- 7' TestWebKitAPI/
+   +---- 8' WebKitTestRunner/
+   |
+   +---- 10' GNUmakefile.am

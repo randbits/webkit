@@ -1,0 +1,39 @@
+
+
+Makefiles:
+Source/WebCore/GNUmakefile.am
++---- Source/WebCore/GNUmakefile.list.am
+Source/WebCore/bindings/gobject/GNUmakefile.am
+
+
+1. Source/WebCore/GNUmakefile.list.am
+   1' webcore_built_sources 
+      DerivedSources/WebCore/*
+      webcore_sources
+      Source/WebCore/*
+   2' webcore_svg_built_sources 
+      DerivedSources/WebCore/*
+      webcore_svg_sources
+      Source/WebCore/*
+   3' dom_binding_idls 
+      $(WebCore)/Modules/*/*.idl \
+      $(WebCore)/css/*.idl \
+      $(WebCore)/dom/*.idl \
+      ...
+   4' webcore_modules_sources
+      Source/WebCore/Modules/*/*.{h,cpp}
+   7' webcore_platform_sources
+   8' webcoregtk_sources
+      WebCore files that use GTK/GDK or any other dependency that requires GTK+.
+
+2. Source/WebCore/GNUmakefile.am
+   noinst_LTLIBRARIES += \
+        libWebCorePlatform.la \
+	libWebCoreModules.la \
+	libWebCore.la \
+        libWebCoreSVG.la \
+	libWebCoreGtk.la
+
+3. Source/WebCore/bindings/gobject/GNUmakefile.am
+webkitgtk_gdom_built_sources += \
+webkitgtk_built_h_api += \
